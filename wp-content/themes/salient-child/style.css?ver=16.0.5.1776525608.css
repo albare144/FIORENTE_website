@@ -1,0 +1,125 @@
+/*
+Theme Name: Salient Child Theme
+Description: This is a custom child theme for Salient
+Theme URI:   https://themeforest.net/item/salient-responsive-multipurpose-theme/4363266
+Author: ThemeNectar
+Author URI:  https://themeforest.net/user/themenectar
+Template: salient
+Version: 1.0
+*/
+
+
+@font-face{font-family:icomoon;src:url(fonts/icomoon.eot%3F3601074db9f6d98f5bfd7164ee041e5a);src:url(fonts/icomoon.eot%3F3601074db9f6d98f5bfd7164ee041e5a) format("embedded-opentype"),url(fonts/icomoon.ttf%3F2b8a3388d532cf3c545c1a38805d9d80) format("truetype"),url(fonts/icomoon.woff%3Fb3e5821aa37e5b15b0f3b6e062832af3) format("woff"),url(fonts/icomoon.svg%3F290ac15c24e368d5074f0d15da5e7bed) format("svg");font-weight:400;font-style:normal}
+body[data-force-header-trans-color="dark"] #header-space{height: 0 !important}
+#logo,.logo-fiorente{font-family:icomoon!important;font-weight: normal}
+#top #logo{font-weight: 500;font-size: 30px}
+#top #logo img{display: none}
+#logo:before,.logo-fiorente:before{content:"\E900";color:#fff}
+.logo-fiorente {
+    font-size: 3.125rem;
+    margin-bottom: 40px;
+    display: block;
+}
+.hero-video .col{min-height: 670px;display: flex;align-items: center;}
+.scratch-box{
+	position: absolute;
+    top: -80px;
+    left: 0px;
+    height: 450px;
+    -webkit-animation: diving-rotate 10s ease-in-out infinite;
+    animation: diving-rotate 10s ease-in-out infinite;
+    width: 425px;
+    background-repeat: no-repeat;
+}
+.scratch-box.align-right{right:0;left: auto}
+.nectar-button{border:1.5px solid var(--nectar-extra-color-3);transition: all 0.5s}
+.nectar-button:hover{background: var(--nectar-extra-color-3) !important;color:#fff !important}
+body.material .nectar-button.jumbo:not([class*=see-through]){padding: 18px 40px}
+.nectar-button.jumbo{font-size:22px}
+#mapwrap #locDetails {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 400px;
+    text-align: right;
+}
+#mapwrap{padding-top:7.5rem}
+#mapwrap #locDetails{position:absolute;top:0;right:0;width:100%;max-width:400px;text-align:right}
+#mapwrap #locDetails div{display:none}
+#mapwrap #locDetails p{padding-bottom:0}
+#mapwrap svg#island-map path{-webkit-animation-duration:1s;animation-duration:1s;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;fill:none}
+#mapwrap svg#island-map #islands path,#mapwrap svg#island-map #water path{stroke:#667ea2}
+#mapwrap svg#island-map #markers .cls-4{stroke:none;fill:#253d77;stroke-width:11px;-webkit-transition:fill .4s ease;transition:fill .4s ease}
+#mapwrap svg#island-map #markers .cls-3{stroke:none;fill:#fff;-webkit-transition:fill .4s ease;transition:fill .4s ease}
+#mapwrap svg#island-map #markers .pin{display:none;-webkit-animation-name:bounceInDown;animation-name:bounceInDown;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
+#mapwrap svg#island-map #markers .pin.active .cls-3,#mapwrap svg#island-map #markers .pin.active .cls-4,#mapwrap svg#island-map #markers .pin:hover .cls-3,#mapwrap svg#island-map #markers .pin:hover .cls-4{stroke:#253d77;fill:#fff;stroke-width:2}
+.img-with-aniamtion-wrap.center{margin-left: auto;margin-right: auto;}
+.row .col .iwithtext .iwt-icon img:not([srcset]){width: 70px}
+.iwithtext .iwt-text{padding-left: 85px}
+#boxed .nectar-slider-wrap[data-full-width=false] .swiper-slide .content h2, .nectar-slider-wrap[data-full-width=false] .swiper-slide .content h2{font-size: 70px;font-family: Playfair Display;line-height: 1.2}
+#boxed .nectar-slider-wrap[data-full-width=false] .swiper-slide .content h2 span, .nectar-slider-wrap[data-full-width=false] .swiper-slide .content h2 span{font-size: 40px;display: block;font-style: italic;font-family: 'Playfair Display SC'}
+.nectar-slider-wrap[data-full-width=false] .swiper-slide .content p{font-size: 20px}
+.nectar-color-accent-color{color: var(--nectar-accent-color) !important}
+.tabbed[data-style="minimal_flexible"] .wpb_tabs_nav{margin-bottom: 25px !important}
+.dark .testimonial_slider[data-style=multiple_visible] blockquote.is-selected p{background: rgba(255,255,255,1)}
+.small{font-size:18px;line-height:1.3}
+.x-small{font-size:14px;line-height:1.3}
+.featured-list li{padding:10px 0;border-bottom:1px solid #aeaeae}
+.max-width-1200 .row_col_wrap_12.col{max-width:1200px;margin:auto !important}
+.price-table .nectar-fancy-box{padding:20px 15px}
+.price-table .nectar-fancy-box .inner{font-size:20px}
+.nectar-button.small,form.fluent_form_1 .wpf_has_custom_css.ff-btn-submit{font-size:15px;text-align:center;padding:10px 30px}
+.ff-btn.ff-btn-submit:hover{background:#212529 !important}
+.ff-default .ff-el-form-control{padding:8px;background: no-repeat;border: none;border-bottom: 1px solid;border-radius: 0;}
+select.ff-el-form-control:not([size]):not([multiple]){height:auto}
+.fluentform .ff-el-input--label{margin:0;line-height:1}
+form.fluent_form_1 .wpf_has_custom_css.ff-btn-submit{border-width:1.5px;font-weight:600}
+.ff-message-success{border:none;box-shadow:none;padding:0}
+.nectar-button[data-color-override="false"].regular-button.blue-button:hover{background:#fff !important;color:var(--nectar-accent-color) !important}
+.fullwidth{width:100%}
+.nectar-price-typography{text-align:center}
+.nectar-price-typography .after-text{display:block;color:#212529}
+.no-border{border:none}
+.nectar-fancy-ul ul li .icon-default-style[class^="icon-"]{line-height:1.2}
+select{font-size:14px}
+ol,ul{margin-bottom:18px}
+@media only screen and (min-width: 1000px){
+#footer-outer .widget h3{font-size: 30px;line-height: 1.5}
+#footer-widgets[data-cols="5"] .container .row >div:nth-child(3) {
+    width: 35%;margin-right: 0;
+}
+#footer-widgets[data-cols="5"] .container .row >div:last-child {
+    display: none;
+}
+.container, body[data-header-format="left-header"] .container, .woocommerce-tabs .full-width-content .tab-container, .nectar-recent-posts-slider .flickity-page-dots, .post-area.standard-minimal.full-width-content .post .inner-wrap, .material #search-outer #search{max-width: 1100px}
+}
+@media screen and (max-width:690px){
+#boxed .nectar-slider-wrap[data-full-width=false] .swiper-slide .content h2 span, .nectar-slider-wrap[data-full-width=false] .swiper-slide .content h2 span{font-size: 28px}
+	.full-width-content .vc_col-sm-12 .nectar-slider-wrap[data-fullscreen="false"] .swiper-slide .content h2{font-size:32px !important;line-height:1.2 !important}
+}
+@media screen and (max-width:990px){
+	.scratch-box{display: none}
+	.mobile-max-width .img-with-aniamtion-wrap{max-width: 300px}
+}
+#ajax-content-wrap #slide-out-widget-area.fullscreen .inner, #slide-out-widget-area.fullscreen-alt .inner{margin-top:0}
+@-webkit-keyframes fill{0%{fill:#fff}to{fill:#8faedb}}
+@keyframes fill{0%{fill:#fff}to{fill:#8faedb}}
+@keyframes diving-rotate {
+0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+50% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+75% {
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+}
+100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+}
