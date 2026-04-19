@@ -117,6 +117,12 @@
     </div>
   </section>
 
+  <!-- =====================  PROFILE STRIP  ==================== -->
+  <section class="profile-strip" aria-label="Fiorente profile">
+    <div class="profile-strip__image" role="img" aria-label="Fiorente underway — full side profile"></div>
+    <span class="profile-strip__caption">Fiorente · George Town · at sea</span>
+  </section>
+
   <!-- ======================  STATEROOMS  ====================== -->
   <!--
       PLACEHOLDER SECTION
@@ -383,20 +389,49 @@
         The three striped cells below are explicit placeholders for new photos.
         Replace each with  <img src="images/gallery-XX.jpg" alt="..."/>
       -->
+      <!--
+        GALLERY
+        9 cells. Cells with class  gallery__item--placeholder  are awaiting
+        interior photos. To swap one in:
+          1. drop new photo into /images/
+          2. replace the whole .gallery__item--placeholder div with:
+               <div class="g-portrait"><img src="images/..." alt="..." /></div>
+      -->
       <div class="gallery">
-        <div class="gallery__item gallery__item--a">
+        <!-- Row 1-2: big landscape + tall portrait -->
+        <div class="g-land-big">
           <img src="images/yacht-profile.jpg" alt="Fiorente underway — side profile" />
         </div>
-        <div class="gallery__item gallery__item--b">
-          <img src="images/yacht-aerial-rear.jpg" alt="Fiorente aerial, rear quarter" />
+        <div class="g-portrait">
+          <img src="images/yacht-bow-top.jpg" alt="Fiorente from directly above, bow view" />
         </div>
-        <div class="gallery__item gallery__item--c gallery__item--placeholder">
+
+        <!-- Row 3: landscape + start of portrait -->
+        <div class="g-land">
+          <img src="images/yacht-aerial-rear.jpg" alt="Fiorente aerial — rear quarter" />
+        </div>
+        <div class="g-portrait">
+          <img src="images/yacht-stern-top.jpg" alt="Fiorente from directly above, stern view" />
+        </div>
+
+        <!-- Row 4: landscape (fills under row 3 landscape) -->
+        <div class="g-land">
+          <img src="images/yacht-aerial-bow.jpg" alt="Fiorente aerial — bow quarter" />
+        </div>
+
+        <!-- Row 5-6: big landscape + placeholder -->
+        <div class="g-land-big">
+          <img src="images/yacht-cruising-aerial.jpg" alt="Fiorente cruising, aerial view" />
+        </div>
+        <div class="g-portrait gallery__item--placeholder">
           Photo pending<br />Interior
         </div>
-        <div class="gallery__item gallery__item--d">
-          <img src="images/yacht-aerial-bow.jpg" alt="Fiorente aerial, bow quarter" />
+
+        <!-- Row 7: landscape + placeholder -->
+        <div class="g-land">
+          <img src="images/yacht-cruising.jpg" alt="Fiorente cruising" />
         </div>
-        <div class="gallery__item gallery__item--e gallery__item--placeholder">
+        <div class="g-square gallery__item--placeholder">
           Photo pending<br />Detail
         </div>
       </div>
