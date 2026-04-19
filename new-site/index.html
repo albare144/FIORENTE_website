@@ -19,6 +19,7 @@
     <a class="nav__brand" href="#top">FIORENTE</a>
     <ul class="nav__menu">
       <li><a href="#yacht">The Yacht</a></li>
+      <li><a href="#film">Film</a></li>
       <li><a href="#staterooms">Staterooms</a></li>
       <li><a href="#entertainment">Entertainment</a></li>
       <li><a href="#dolce-vita">La Dolce Vita</a></li>
@@ -85,6 +86,29 @@
           <img src="images/yacht-overhead.jpg" alt="Fiorente underway, viewed from above the stern" />
           <p class="split__caption">— Fiorente · George Town</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================  FILM  ========================== -->
+  <section class="film" id="film" aria-label="Fiorente — the film">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">The Film</span>
+        <h2>Fiorente, <span class="italic">in motion.</span></h2>
+        <hr class="rule" />
+        <p style="max-width: 640px;">A short film by Bluei Productions, shot across a Mediterranean summer.</p>
+      </div>
+
+      <div class="film__player" data-video-id="rH5U_scw6iY" role="button" tabindex="0" aria-label="Play the Fiorente film">
+        <img class="film__poster" src="images/bow-cutting.jpg" alt="" />
+        <span class="film__play" aria-hidden="true">
+          <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#b8935a" opacity="0.95"/>
+            <path d="M 45,24 27,14 27,34" fill="#f5ede0"/>
+          </svg>
+        </span>
+        <span class="film__label">Watch the film · 2:00</span>
       </div>
     </div>
   </section>
@@ -487,6 +511,17 @@
         <div class="g-square">
           <img src="images/dressing-area.jpg" alt="Dressing area with mirror and lamps" />
         </div>
+
+        <div class="g-land">
+          <img src="images/aft-ensign.jpg" alt="Aft deck with British red ensign, mountains of the Côte d'Azur beyond" />
+        </div>
+        <div class="g-portrait">
+          <img src="images/bow-head-on.jpg" alt="Fiorente bow head-on, portrait" />
+        </div>
+
+        <div class="g-portrait">
+          <img src="images/bow-aerial-forward.jpg" alt="Fiorente aerial, coming forward" />
+        </div>
       </div>
     </div>
   </section>
@@ -520,6 +555,26 @@
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+
+    // lite YouTube — load iframe only on click/keyboard activation
+    document.querySelectorAll('.film__player').forEach(player => {
+      const load = () => {
+        if (player.classList.contains('playing')) return;
+        const id = player.dataset.videoId;
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+        iframe.setAttribute('allow', 'autoplay; encrypted-media; fullscreen; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.title = 'Fiorente — the film';
+        player.innerHTML = '';
+        player.appendChild(iframe);
+        player.classList.add('playing');
+      };
+      player.addEventListener('click', load);
+      player.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); load(); }
+      });
+    });
   </script>
 </body>
 </html>

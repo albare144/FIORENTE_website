@@ -569,6 +569,85 @@ section { padding: var(--space-xl) 0; }
 @media (max-width: 900px) { .destinations { column-count: 2; } }
 @media (max-width: 560px) { .destinations { column-count: 1; } }
 
+/* --------------------  Film / Video  --------------------------- */
+
+.film {
+  background: var(--ivory);
+  padding: var(--space-xl) 0;
+}
+.film__player {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin-top: var(--space-l);
+  overflow: hidden;
+  background: var(--night);
+  cursor: pointer;
+  border: 1px solid rgba(184, 147, 90, 0.2);
+}
+.film__poster {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.5s ease;
+}
+.film__player:hover .film__poster { transform: scale(1.03); }
+
+.film__player::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(5, 14, 27, 0.1) 0%,
+    rgba(5, 14, 27, 0.35) 50%,
+    rgba(5, 14, 27, 0.55) 100%);
+  pointer-events: none;
+  transition: background .4s ease;
+}
+.film__player:hover::after {
+  background: linear-gradient(180deg,
+    rgba(5, 14, 27, 0.15) 0%,
+    rgba(5, 14, 27, 0.25) 50%,
+    rgba(5, 14, 27, 0.45) 100%);
+}
+
+.film__play {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(64px, 8vw, 112px);
+  height: clamp(45px, 5.6vw, 79px);
+  display: block;
+  z-index: 1;
+  transition: transform .35s cubic-bezier(.2,.8,.2,1);
+  pointer-events: none;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.45));
+}
+.film__play svg { width: 100%; height: 100%; display: block; }
+.film__player:hover .film__play { transform: translate(-50%, -50%) scale(1.08); }
+
+.film__label {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 1;
+  color: var(--ivory);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-shadow: 0 1px 10px rgba(5, 14, 27, 0.7);
+}
+
+.film__player.playing { cursor: default; }
+.film__player.playing::after,
+.film__player.playing .film__play,
+.film__player.playing .film__label { display: none; }
+.film__player iframe {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  border: 0;
+  display: block;
+}
+
 /* --------------------  La Dolce Vita  -------------------------- */
 
 .dolce-vita {
