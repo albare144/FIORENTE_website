@@ -193,8 +193,13 @@ section { padding: var(--space-xl) 0; }
   background:
     linear-gradient(180deg,
       rgba(5, 14, 27, 0.55) 0%,
-      rgba(5, 14, 27, 0.25) 35%,
-      rgba(5, 14, 27, 0.85) 100%);
+      rgba(5, 14, 27, 0.15) 35%,
+      rgba(5, 14, 27, 0.85) 100%),
+    linear-gradient(90deg,
+      rgba(5, 14, 27, 0.78) 0%,
+      rgba(5, 14, 27, 0.45) 42%,
+      rgba(5, 14, 27, 0.15) 70%,
+      rgba(5, 14, 27, 0.0) 100%);
 }
 @keyframes slowZoom {
   from { transform: scale(1.08); }
@@ -213,6 +218,7 @@ section { padding: var(--space-xl) 0; }
 .hero__eyebrow {
   opacity: 0;
   animation: fadeUp 1s ease-out 0.2s forwards;
+  text-shadow: 0 2px 16px rgba(5, 14, 27, 0.6);
 }
 .hero__title {
   font-size: clamp(3.5rem, 11vw, 10rem);
@@ -220,6 +226,7 @@ section { padding: var(--space-xl) 0; }
   letter-spacing: -0.02em;
   opacity: 0;
   animation: fadeUp 1.2s ease-out 0.4s forwards;
+  text-shadow: 0 4px 40px rgba(5, 14, 27, 0.55);
 }
 .hero__title .italic-light {
   font-style: italic;
