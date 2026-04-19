@@ -21,7 +21,7 @@
       <li><a href="#yacht">The Yacht</a></li>
       <li><a href="#staterooms">Staterooms</a></li>
       <li><a href="#entertainment">Entertainment</a></li>
-      <li><a href="#dining">Dining</a></li>
+      <li><a href="#dolce-vita">La Dolce Vita</a></li>
       <li><a href="#crew">Crew</a></li>
       <li><a href="#destinations">Destinations</a></li>
       <li><a href="#contact">Enquire</a></li>
@@ -147,32 +147,29 @@
       <div class="staterooms">
         <article class="stateroom stateroom--master">
           <div class="stateroom__image">
-            <img src="images/lifestyle-01.jpg" alt="Master stateroom placeholder" />
-            <span class="stateroom__placeholder-tag">Photo pending</span>
+            <img src="images/master-suite-new.jpg" alt="Master stateroom of Fiorente — walnut panelling with original artwork" />
           </div>
           <div class="stateroom__meta">
             <h3 class="stateroom__name">Master Suite</h3>
             <span class="stateroom__type">En-suite · King bed</span>
           </div>
-          <p class="stateroom__desc">The full-beam owner's suite, with private ensuite, walk-in wardrobe, and panoramic sea-level views.</p>
+          <p class="stateroom__desc">The owner's suite, finished in rich walnut with original artwork, private en-suite, and walk-in wardrobe.</p>
         </article>
 
         <article class="stateroom stateroom--2">
           <div class="stateroom__image">
-            <img src="images/lifestyle-02.jpg" alt="Double stateroom placeholder" />
-            <span class="stateroom__placeholder-tag">Photo pending</span>
+            <img src="images/double-stateroom-1.jpg" alt="Double stateroom on Fiorente" />
           </div>
           <div class="stateroom__meta">
             <h3 class="stateroom__name">Double Stateroom I</h3>
             <span class="stateroom__type">En-suite · Queen</span>
           </div>
-          <p class="stateroom__desc">A generous guest suite appointed in the same palette of bone, walnut, and brass as the master.</p>
+          <p class="stateroom__desc">A generous guest suite with natural light, bespoke joinery, and the same palette of warm timbers as the master.</p>
         </article>
 
         <article class="stateroom stateroom--3">
           <div class="stateroom__image">
-            <img src="images/lifestyle-03.jpg" alt="Double stateroom placeholder" />
-            <span class="stateroom__placeholder-tag">Photo pending</span>
+            <img src="images/master-suite.jpg" alt="Double stateroom II — walnut interior with private en-suite" />
           </div>
           <div class="stateroom__meta">
             <h3 class="stateroom__name">Double II</h3>
@@ -182,8 +179,7 @@
 
         <article class="stateroom stateroom--4">
           <div class="stateroom__image">
-            <img src="images/lifestyle-04.jpg" alt="Twin stateroom placeholder" />
-            <span class="stateroom__placeholder-tag">Photo pending</span>
+            <img src="images/twin-stateroom.jpg" alt="Twin stateroom on Fiorente with en-suite" />
           </div>
           <div class="stateroom__meta">
             <h3 class="stateroom__name">Twin I</h3>
@@ -192,7 +188,7 @@
         </article>
 
         <article class="stateroom stateroom--5">
-          <div class="stateroom__image">
+          <div class="stateroom__image stateroom__image--placeholder">
             <img src="images/lifestyle-01.jpg" alt="Twin stateroom placeholder" />
             <span class="stateroom__placeholder-tag">Photo pending</span>
           </div>
@@ -281,6 +277,17 @@
           <p class="split__caption" style="color: var(--brass-light);">— Galley &amp; dining <span class="placeholder-badge">Placeholder</span></p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- =====================  LA DOLCE VITA  ==================== -->
+  <section class="dolce-vita" id="dolce-vita">
+    <div class="dolce-vita__content">
+      <span class="eyebrow eyebrow--light">La Dolce Vita</span>
+      <h2 class="dolce-vita__title">Where <span class="italic">la dolce vita</span> becomes reality.</h2>
+      <p class="dolce-vita__body">To some, the charm of yachting lies in the calming sound of the waves breaking against the hull — the sea cutting through itself.</p>
+      <p class="dolce-vita__body">To others, the good life is the people you love by your side, and the quiet removal of distractions.</p>
+      <p class="dolce-vita__body">Fiorente is designed for both.</p>
     </div>
   </section>
 
@@ -385,20 +392,17 @@
       </div>
 
       <!--
-        GALLERY PLACEHOLDER BLOCK
-        The three striped cells below are explicit placeholders for new photos.
-        Replace each with  <img src="images/gallery-XX.jpg" alt="..."/>
-      -->
-      <!--
         GALLERY
-        9 cells. Cells with class  gallery__item--placeholder  are awaiting
-        interior photos. To swap one in:
-          1. drop new photo into /images/
-          2. replace the whole .gallery__item--placeholder div with:
-               <div class="g-portrait"><img src="images/..." alt="..." /></div>
+        14 cells — all now filled. Mix of cell-size classes tiles cleanly
+        in a 3-column grid with auto-flow: dense.
+
+        Cell-size classes:
+          .g-land-big  →  2×2 (big landscape feature)
+          .g-land      →  2×1 (wide landscape)
+          .g-portrait  →  1×2 (tall portrait)
+          .g-square    →  1×1 (small square crop)
       -->
       <div class="gallery">
-        <!-- Row 1-2: big landscape + tall portrait -->
         <div class="g-land-big">
           <img src="images/yacht-profile.jpg" alt="Fiorente underway — side profile" />
         </div>
@@ -406,7 +410,6 @@
           <img src="images/yacht-bow-top.jpg" alt="Fiorente from directly above, bow view" />
         </div>
 
-        <!-- Row 3: landscape + start of portrait -->
         <div class="g-land">
           <img src="images/yacht-aerial-rear.jpg" alt="Fiorente aerial — rear quarter" />
         </div>
@@ -414,25 +417,56 @@
           <img src="images/yacht-stern-top.jpg" alt="Fiorente from directly above, stern view" />
         </div>
 
-        <!-- Row 4: landscape (fills under row 3 landscape) -->
-        <div class="g-land">
+        <div class="g-square">
           <img src="images/yacht-aerial-bow.jpg" alt="Fiorente aerial — bow quarter" />
         </div>
+        <div class="g-square">
+          <img src="images/yacht-bow-port.jpg" alt="Fiorente at anchor — port side bow" />
+        </div>
 
-        <!-- Row 5-6: big landscape + placeholder -->
         <div class="g-land-big">
-          <img src="images/yacht-cruising-aerial.jpg" alt="Fiorente cruising, aerial view" />
+          <img src="images/yacht-at-anchor.jpg" alt="Fiorente at anchor near Cannes" />
         </div>
-        <div class="g-portrait gallery__item--placeholder">
-          Photo pending<br />Interior
+        <div class="g-land">
+          <img src="images/bridge-view.jpg" alt="The bridge of Fiorente, looking out towards Cannes" />
         </div>
 
-        <!-- Row 7: landscape + placeholder -->
+        <div class="g-square">
+          <img src="images/bridge-detail.jpg" alt="Bridge navigation console — detail" />
+        </div>
         <div class="g-land">
+          <img src="images/master-ensuite.jpg" alt="Master en-suite bathroom" />
+        </div>
+
+        <div class="g-square">
+          <img src="images/yacht-cruising-aerial.jpg" alt="Fiorente cruising — aerial" />
+        </div>
+        <div class="g-land">
+          <img src="images/yacht-bow-starboard.jpg" alt="Fiorente at anchor with guests on the bow" />
+        </div>
+
+        <div class="g-square">
           <img src="images/yacht-cruising.jpg" alt="Fiorente cruising" />
         </div>
-        <div class="g-square gallery__item--placeholder">
-          Photo pending<br />Detail
+        <div class="g-land">
+          <img src="images/deck-detail.jpg" alt="Guests on the mid-deck of Fiorente" />
+        </div>
+
+        <div class="g-portrait">
+          <img src="images/guest-bathroom.jpg" alt="Guest en-suite bathroom with double vanity" />
+        </div>
+        <div class="g-land">
+          <img src="images/master-suite-angle.jpg" alt="Master suite from the writing desk" />
+        </div>
+
+        <div class="g-portrait">
+          <img src="images/interior-corridor.jpg" alt="Interior corridor on Fiorente" />
+        </div>
+        <div class="g-land">
+          <img src="images/bow-cutting.jpg" alt="Fiorente's bow cutting through the Mediterranean" />
+        </div>
+        <div class="g-square">
+          <img src="images/dressing-area.jpg" alt="Dressing area with mirror and lamps" />
         </div>
       </div>
     </div>
