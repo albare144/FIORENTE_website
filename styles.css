@@ -181,7 +181,7 @@ section { padding: var(--space-xl) 0; }
 }
 .hero__bg {
   position: absolute; inset: 0;
-  background-image: url('images/hero-yacht.jpg');
+  background-image: url('images/bow-sunpad-top.jpg');
   background-size: cover;
   background-position: center;
   z-index: -2;
@@ -737,7 +737,7 @@ section { padding: var(--space-xl) 0; }
 }
 .profile-strip__image {
   position: absolute; inset: 0;
-  background-image: url('images/yacht-broadside.jpg');
+  background-image: url('images/yacht-bow-port.jpg');
   background-size: cover;
   background-position: center;
   transform: scale(1.02);
