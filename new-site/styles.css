@@ -181,7 +181,7 @@ section { padding: var(--space-xl) 0; }
 }
 .hero__bg {
   position: absolute; inset: 0;
-  background-image: url('images/bow-sunpad-top.jpg');
+  background-image: url('images/yacht-at-sea.jpg');
   background-size: cover;
   background-position: center;
   z-index: -2;
